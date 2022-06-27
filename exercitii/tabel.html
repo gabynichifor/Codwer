@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2 >Angajati</h2>
+    <style>
+        html, body {
+            font-size: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table td, tr, th {
+            border: 1px solid black;
+        }
+    </style>
+    <div class="container">
+        <table>
+            <thead>
+            <tr>
+                    <th>No.</th>
+                    <th>Nume</th>
+                    <th>Prenume</th>
+                    <th>Virsta</th>
+                </tr>
+            </thead>
+            <tbody>
+                <script>
+                    function clearTable(value) {
+                        let myContainer = document.getElementsByTagName('tbody')[0];
+                        if (value) {
+                            myContainer.innerHTML = value;
+                        } else {
+                            myContainer.innerHTML = `
+                                <tr>
+                                    <td colspan="10" style="text-align: center;">La moment nu sunt elemente!
+                                </tr>`;
+                        }
+                    }
+
+                    const myUsers = [
+                        { surname: 'Ion', name: 'Ionescu', stagiu: 5, datanasterii: '10.08.1998'},
+                        { surname: 'Vasile', name: 'Botnaru', stagiu: 1, datanasterii: '24.12.2001'},
+                        { surname: 'Arina', name: 'Chirtoaca', stagiu: 10, datanasterii: '30.10.1996'},
+                        { surname: 'Iulian', name: 'Frunza', stagiu: 20, datanasterii: '20.05.1899'},
+                        { surname: 'Victor', name: 'Bonta', stagiu: 1, datanasterii: '24.11.2002'},
+
+                ];
+
+
+                    function genereazaCorpulTabelului() {
+                        let corpulTabelului = '';
+                        for (let i = 0; i < myUsers.length; i++) {
+                            corpulTabelului += `
+                            ${i % 2 === 0 ? '<tr style="background: lightblue; color: blue;">' : '<tr>'}
+                            </tr>`;
+                        }
+
+                        return corpulTabelului;
+                    }
+                    for (let i = 0; i < myUsers.length; i++) {
+                        document.write(` ${i % 2 === 0 ? '<tr style="background: lightblue; color: blue;">' : '<tr>'}
+                            <td>${i + 1}</td>
+                            <td>${myUsers[i].surname}</td>
+                            <td>${myUsers[i].name}</td>
+                            <td>${myUsers[i].stagiu} ani</td>
+                    
+                        </tr>`);
+                    }
+            </script>
+        </tbody>
+    </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+</body>
+</html>

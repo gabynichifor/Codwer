@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="forma.css">
+    <title>Forms</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body> 
+
+<h2>Form</h2>
+
+<form>
+      <label for="fname">Your Name (required)</label>
+      <input placeholder="Name" type="text" id="fname" name="fname" ><br> <br>
+      <label for="femail">Your Email (required)</label>
+      <input placeholder="Gmail"type="text" id="femail" name="femail" > <br> <br>
+<label for="fname">What's this all about?</label><br>
+    <input type="checkbox" id="sayhello" name="sayhello">
+    <label for="sayhello"> Say Hello </label><br>
+    <input type="checkbox" id="complain" name="complain">
+    <label for="complain"> Complain </label><br>
+    <input type="checkbox" id="shareajoke" name="shareajoke">
+    <label for="shareajoke"> Share a joke </label><br>
+<label for="subject">Subject</label>
+<select id="subject" name="subject">
+    <option placeholder="Please select"> </option>
+    <option value="chat">Chatting</option>
+    <option value="complaining">Complaining</option>
+    <option value="joking">Joking</option>
+    <option value="problems">Problems</option>
+</select><br> <br>
+<label for="subject">Your Message </label><br> 
+<textarea name="Your Message" rows="8" cols="10">Message...</textarea>
+<br> <br>
+<input type= "submit" value="Submit" >
+</form>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+  
+</body>
+</html>
