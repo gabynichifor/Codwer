@@ -37,8 +37,8 @@ input[type=submit]:hover {
   padding: 20px;
 }
 
-.h2 {
-    text-decoration-color:#d8a0e6 ;
+h2.mystyle {
+    color:#d8a0e6 ;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
     justify-content: center;
 }
