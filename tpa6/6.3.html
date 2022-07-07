@@ -14,12 +14,14 @@
     <p style="color: rgb(255, 187, 0);" id="demo4"></p>
     <p style="color: rgb(14, 10, 2);" id="demo5"></p>
     <p style="color: rgb(112, 132, 141);" id="demo6"></p>
+    <p style="color: rgb(131, 208, 243);" id="demo7"></p>
     <script>
-        var arr = ["HTML" , 11 , "JavaScript" , 2 , "CSS" , 23 , 12 ];
-        document.getElementById("demo1").innerHTML = arr;
-        arr.push(-2);
+        let arr = ["HTML" , 11 , "JavaScript" , 2 , "CSS" , 23 , 12 ];
+        document.getElementById("demo1").innerHTML =  JSON.stringify(arr);
+        let anotherArr=[...arr];
+         arr.push(-2);
         document.getElementById("demo2").innerHTML = arr;
-        document.getElementById("demo1").innerHTML = arr;
+        document.getElementById("demo1").innerHTML = anotherArr;
         arr.unshift(1000);
         document.getElementById("demo3").innerHTML = arr;
         arr.push("Last array element");
@@ -28,12 +30,14 @@
         arr.splice(3,1);
         document.getElementById("demo4").innerHTML = arr;
         document.getElementById("demo4").innerHTML = arr;
-        //var filtered = arr.filter(function(item) {
-          //  return (typeof item === "number")
-          //});
-          //arr.filter(Number);
-       // document.getElementById("demo5").innerHTML = arr;
-       
+        console.log('arr', arr)
+        var filtered = arr.filter(function(item) {
+            return (typeof item === "number")
+          });
+        document.getElementById("demo5").innerHTML = filtered;
+        document.getElementById("demo6").innerHTML = filtered.map(nr => Math.pow(nr,2));
+        document.getElementById("demo7").innerHTML = Math.max.apply(null, filtered);
+
     </script>
 </body>
 </html>
